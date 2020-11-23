@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { View,
     Text,
     Alert,
@@ -11,8 +11,11 @@ import { View,
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 import ModalCard from "./ModalCard";
 import ListCard from "./ListCard";
+import { ScrollView } from 'react-native-gesture-handler';
 
-export default function Detail() {
+export default function Detail({navigation}) {
+    const [modalVisible, setModalVisible] = useState(false);
+
     return (
         <ImageBackground
             source={require('../images/back2.png')}
@@ -28,7 +31,9 @@ export default function Detail() {
                 }}
             >
                 <Icon name="menu" size={30} color="#a2a2db" style={{width:20}}/>   
-                <Icon name="account-circle" size={33} color="#a2a2db" style={{marginRight:10}}/> 
+                <Icon name="account-circle" size={33} color="#a2a2db" style={{marginRight:10}}
+                    onPress={()=>navigation.navigate('Home')}
+                /> 
             </View>
             <View
                 style={{
@@ -101,6 +106,49 @@ export default function Detail() {
                     Indonesia
                 </Text>
             </View>
+            <Text style={{
+                paddingHorizontal: 40,
+                color: "#a2a2db",
+                fontFamily:"RobotoRegular",
+            }}>
+                20 June, 2021
+            </Text>
+            <View style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                paddingHorizontal: 50,
+                marginTop: 60
+            }}>
+                <Image 
+                    source={require('../images/dots.png')}
+                    style={{width:18,height:16}}
+                />
+                <Image 
+                    source={require('../images/filter.png')}
+                    style={{marginRight:10,height:18}}
+                />
+            </View>
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                style={{marginVertical: 5}}
+            >
+                <ListCard onPress={()=>setModalVisible(true)}/>
+                <ListCard onPress={()=>setModalVisible(true)}/>
+                <ListCard onPress={()=>setModalVisible(true)}/>
+                <View>
+                    <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={modalVisible}
+                    onRequestClose={() => {
+                        Alert.alert("Modal is closed");
+                    }}
+                    >
+                        <ModalCard onPress={()=>setModalVisible(!modalVisible)} />
+                    </Modal>
+                </View>
+            </ScrollView>
         </ImageBackground>
     )
 }
