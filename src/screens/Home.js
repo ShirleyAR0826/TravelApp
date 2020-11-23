@@ -13,10 +13,11 @@ export default function Home({ navigation }) {
                 flexDirection:"row",
                 marginTop:40,
                 alignItems:"center",
-                paddingHorizontal:40
+                paddingHorizontal:40,
+                justifyContent:"space-between"
                 }}>
                 <Icon name="menu" size={30} color="#a2a2db" style={{width:20}}/>
-                <Icon name="account-circle" size={33} color="#a2a2db" style={{marginLeft:230}}/>
+                <Icon name="account-circle" size={33} color="#a2a2db" style={{marginRight:10}}/>
             </View>
             <View style={{paddingHorizontal:40,marginTop:25}}>
                 <Text style={{

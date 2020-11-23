@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "It's a Travel Application created with React Native :)",
+    "githubUrl": "https://github.com/ShirleyAR0826/TravelApp"
   }
 }

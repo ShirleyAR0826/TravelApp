@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { View,
     Text,
     Alert,
@@ -145,9 +145,11 @@ export default function Detail({navigation}) {
                         Alert.alert("Modal is closed");
                     }}
                     >
-                        <ModalCard onPress={()=>setModalVisible(!modalVisible)} />
+                    <ModalCard
+                        onPress={() => {setModalVisible(!modalVisible)}}
+                    />
                     </Modal>
-                </View>
+          </View>
             </ScrollView>
         </ImageBackground>
     )
