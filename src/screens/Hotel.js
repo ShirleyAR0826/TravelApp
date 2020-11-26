@@ -13,7 +13,7 @@ import ModalCard from "./ModalCard";
 import ListCard from "./ListCard";
 import { ScrollView } from 'react-native-gesture-handler';
 
-export default function Detail({navigation}) {
+export default function Hotel({navigation}) {
     const [modalVisible, setModalVisible] = useState(false);
 
     return (
@@ -49,42 +49,26 @@ export default function Detail({navigation}) {
                         width:80,
                         height:80,
                         borderRadius:40,
-                        backgroundColor:"#5facdb",
+                        backgroundColor:"#ff5c83",
                         justifyContent:"center",
                         alignItems:"center"
                     }}
                 >
-                    <Image
-                        source={require('../images/p.png')}
-                        style={{height:26,width:26}}
-                    />
+                    <Icon name="office-building" color="white" size={32} onPress={()=>navigation.navigate('Home')}/>
                 </View>
             </View>
             <View style={{
                     flexDirection:"row",
                     paddingHorizontal:40,
-                    alignItems:"center"
+                    alignItems:"center",
+                    justifyContent:"center"
                 }}>
                 <Text style={{
                     fontSize:24,
                     fontFamily:"RobotoBold",
                     color:"#FFF"
                 }}>
-                    NYC
-                </Text>
-                <Text style={{
-                    fontSize:20,
-                    color:"#a2a2db",
-                    paddingHorizontal:15
-                }}>
-                    - - - - - - - - - - - - - - - - -
-                </Text>
-                <Text style={{
-                    fontSize:24,
-                    fontFamily:"RobotoBold",
-                    color:"#aFFF",
-                }}>
-                    IDN
+                    Hotels
                 </Text>
             </View>
             <View style={{
@@ -97,13 +81,6 @@ export default function Detail({navigation}) {
                     fontFamily:"RobotoRegular"
                 }}>
                     New York
-                </Text>
-                <Text style={{
-                    color:"#a2a2db",
-                    fontFamily:"RobotoRegular",
-                    paddingRight:10
-                }}>
-                    Indonesia
                 </Text>
             </View>
             <Text style={{
@@ -154,4 +131,3 @@ export default function Detail({navigation}) {
         </ImageBackground>
     )
 }
-

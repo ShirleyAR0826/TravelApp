@@ -62,7 +62,7 @@ export default function Home({ navigation }) {
                     style={{marginRight:-40, marginTop:30}}
                 >
                     <TouchableOpacity 
-                    onPress={()=>navigation.navigate('Detail')}
+                    onPress={()=>navigation.navigate('Flight')}
                     style={{
                         alignItems:"center",
                         justifyContent:"center",
@@ -76,7 +76,9 @@ export default function Home({ navigation }) {
                             style={{height:24,width:24}}
                         />
                     </TouchableOpacity>
-                    <View style={{
+                    <TouchableOpacity 
+                    onPress={()=>navigation.navigate('Hotel')}
+                    style={{
                         alignItems:"center",
                         justifyContent:"center",
                         height:66,
@@ -86,8 +88,10 @@ export default function Home({ navigation }) {
                         marginLeft:22
                     }}>
                         <Icon name="office-building" color="white" size={32} />
-                    </View>
-                    <View style={{
+                    </TouchableOpacity>
+                    <TouchableOpacity 
+                    onPress={()=>navigation.navigate('Transfers')}
+                    style={{
                         alignItems:"center",
                         justifyContent:"center",
                         height:66,
@@ -97,8 +101,10 @@ export default function Home({ navigation }) {
                         marginLeft:22
                     }}>
                         <Icon name="bus" color="white" size={32}/>
-                    </View>
-                    <View style={{
+                    </TouchableOpacity>
+                    <TouchableOpacity 
+                    onPress={()=>navigation.navigate('Tours')}
+                    style={{
                         alignItems:"center",
                         justifyContent:"center",
                         height:66,
@@ -107,8 +113,8 @@ export default function Home({ navigation }) {
                         backgroundColor:"#bb32fe",
                         marginLeft:22
                     }}>
-                        <Icon name="dots-horizontal" color="white" size={32}/>
-                    </View>
+                        <Icon name="beach" color="white" size={32} />
+                    </TouchableOpacity>
                 </ScrollView>
                 <Text
                     style={{
