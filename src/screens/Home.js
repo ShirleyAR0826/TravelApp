@@ -35,15 +35,15 @@ export default function Home({ navigation }) {
                     fontFamily:"RobotoRegular",
                     color:"#a2a2db"
                 }}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Come and Discover A More Rewarding Way To Travel.
                 </Text>
                 <View style={{
                     flexDirection:"row",
                     backgroundColor:"#FFF",
                     borderRadius:40,
                     alignItems:"center",
-                    paddingVertical:10,
-                    paddingHorizontal:20,
+                    paddingVertical:14,
+                    paddingHorizontal:10,
                     marginTop:30
                 }}>
                     <Image source={require('../images/search.png')} style={{height:14,width:14}}/>
